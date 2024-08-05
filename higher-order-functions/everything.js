@@ -2,17 +2,18 @@ function every(array, test)
 {
     const trueCount = []
 
-    for (let i = 0; i > array.length; i++)
+    for (let i = 0; i < array.length; i++)
     {
+    //    console.log(test(array[i]))
         if (test(array[i]))
         {
-            trueCount.push(true)
-        } else {
-            trueCount.push(false)
-        }
+            trueCount.push(array[i])
+        } 
     }
 
-    if (!trueCount.includes(false))
+    // console.log(trueCount)
+
+    if (trueCount.length === array.length)
     {
         return true
     } else {
